@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState === 4) {
+                    document.getElementById('ajax').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open('GET', 'http://localhost:3000/data?number=10');
+            xhr.send();
+        </script>
+    </head>
+    <body>
+        <div id="ajax"> </div>
+        <input type="number">
+        <button onclick="show()">Get Result!</button>
+    </body>
+</html>
