@@ -10,6 +10,11 @@
             };
             xhr.open('GET', 'http://localhost:3000/data?number=10');
             xhr.send();
+            function show() {
+                var n = Number(document.getElementsByTagName('input')[0].value);
+                console.log(n);
+                document.body.innerHTML = `<p>${(n+1) * n / 2}</p>`
+            }
         </script>
     </head>
     <body>
